@@ -31,6 +31,12 @@ public class NetUtil {
 		log.debug("IP : {}, MAC : {}",ip.getHostAddress(), macAddress);
 		return macAddress;
 	}
+
+	// http://localhost:8100 => return "localhost"
+	public static String getDomain(ServletRequest request) {
+		String host = request.getServerName();
+		return host;
+	}
 	
 	public static String getHost(ServletRequest request) {
 		String host = request.getServerName();
