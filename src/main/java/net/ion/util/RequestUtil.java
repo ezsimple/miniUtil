@@ -11,7 +11,11 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 public class RequestUtil {
-
+	
+	public static HttpServletRequest getHttpServletRequest() {
+		return NetUtil.getHttpServletRequest();
+	}
+	
 	public static JSONObject getParameterToJson(HttpServletRequest request) {
 		return JSONObject.fromObject(request.getParameterMap());
 	}

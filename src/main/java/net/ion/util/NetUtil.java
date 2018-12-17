@@ -33,7 +33,8 @@ public class NetUtil {
 	}
 
 	// http://localhost:8100 => return "localhost"
-	public static String getDomain(ServletRequest request) {
+	public static String getDomain() {
+		HttpServletRequest request = getHttpServletRequest();
 		String host = request.getServerName();
 		return host;
 	}
